@@ -6,12 +6,13 @@
 </head>
 <body>
 	<header>
-		<img src="../logo/plogo2.png" alt="">
+		<img src="../logo/plogo2.png" alt="" id="plogo">
 		<ul>
 			<li><a href="../index.html" >Home</a></li>
 			<li><a href="#" id="Home" >Work</a></li>
 			<li><a href="https://docs.google.com/document/d/10RPCZFxLx4gw997sRmqjlQayazF5mM9EkFhNKbtHVT0/edit?usp=sharing">Resume</a></li>
 			<li><a href="contact.html">Contact</a></li>
+			<li><img src="../logo/sun.png" alt="" id="icon"></li>
 		</ul>
 	</header>
 	<div class="workcontainer">
@@ -24,7 +25,7 @@
 
 					<div class="projectlink1">
 						<a href="https://github.com/Dilshad24/ecommerce-website">Github</a>
-						<a href="https://easyshopping122.000webhostapp.com/">website</a>
+						<a href="../project_image/easyshopping.com.jpg">website</a>
 					</div>
 					
 				</div>
@@ -79,6 +80,51 @@
 			</div>
 		</div>
 	</div>
-	
+<script>
+	let lightMode= localStorage.getItem('lightMode');
+	const icon = document.querySelector('#icon');
+	const enableLightMode=() =>{
+		document.body.classList.add('lightmode');
+		localStorage.setItem('lightMode','enabled');
+	}
+	const disableLightMode=() =>{
+		document.body.classList.remove('lightmode');
+		localStorage.setItem('lightMode',null);
+	}
+	if(lightMode === "enabled"){
+		enableLightMode();
+		icon.src="../logo/moon.png";
+		plogo.src="../logo/logolightmode2.png"
+	}
+
+	icon.addEventListener("click", () =>{
+		lightMode= localStorage.getItem('lightMode');
+		if(lightMode !== "enabled"){
+			enableLightMode();
+			icon.src="../logo/moon.png";
+			plogo.src="../logo/logolightmode2.png"
+		}
+		else{
+			disableLightMode();
+			icon.src="../logo/sun.png";
+	    	plogo.src="../logo/plogo2.png";
+		}
+	});
+
+
+	// var icon = document.getElementById('icon');
+	// var plogo= document.getElementById('plogo');
+	// icon.onclick = function(){
+	// 	document.body.classList.toggle("light-theme");
+	// 	if (document.body.classList.contains("light-theme")) {
+	// 		icon.src="../logo/moon.png"
+	// 		plogo.src="../logo/logolightmode2.png"
+	// 	}
+	// 	else{
+	// 		icon.src="../logo/sun.png"
+	// 		plogo.src="../logo/plogo2.png"
+	// 	}
+	// }
+</script>	
 </body>
 </html>

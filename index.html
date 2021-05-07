@@ -6,13 +6,15 @@
 </head>
 <body>
 	<header>
-		<img src="logo/plogo2.png" alt="">
+		<img src="logo/plogo2.png" alt="" id="plogo">
 		<ul>
 			<li><a href="#" id="Home">Home</a></li>
 			<li><a href="page/work.html" >Work</a></li>
 			<li><a href="https://docs.google.com/document/d/10RPCZFxLx4gw997sRmqjlQayazF5mM9EkFhNKbtHVT0/edit?usp=sharing">Resume</a></li>
 			<li><a href="page/contact.html">Contact</a></li>
+			<li><img src="logo/sun.png" alt="" id="icon"></li>
 		</ul>
+
 	</header>
 	<div class="name">
 		<p>About </p>
@@ -47,6 +49,48 @@
 			</div>
 
 		</div>
+<script>
+	let lightMode= localStorage.getItem('lightMode');
+	const icon = document.querySelector('#icon');
+	const enableLightMode=() =>{
+		document.body.classList.add('lightmode');
+		localStorage.setItem('lightMode','enabled');
+	}
+	const disableLightMode=() =>{
+		document.body.classList.remove('lightmode');
+		localStorage.setItem('lightMode',null);
+	}
+	if(lightMode === "enabled"){
+		enableLightMode();
+		icon.src="logo/moon.png";
+		plogo.src="logo/logolightmode2.png"
+	}
+
+	icon.addEventListener("click", () =>{
+		lightMode= localStorage.getItem('lightMode');
+		if(lightMode !== "enabled"){
+			enableLightMode();
+			icon.src="logo/moon.png";
+			plogo.src="logo/logolightmode2.png"
+		}
+		else{
+			disableLightMode();
+			icon.src="logo/sun.png";
+	    	plogo.src="logo/plogo2.png";
+		}
+	});
+	// icon.onclick = function(){
+	// 	document.body.classList.toggle("light-theme");
+	// 	if (document.body.classList.contains("light-theme")) {
+	// 		icon.src="logo/moon.png"
+	// 		plogo.src="logo/logolightmode2.png"
+	// 	}
+	// 	else{
+	// 		icon.src="logo/sun.png"
+	// 		plogo.src="logo/plogo2.png"
+	// 	}
+	// }
+</script>
 	</div>
 	
 </body>
