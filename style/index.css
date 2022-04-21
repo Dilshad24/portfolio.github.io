@@ -110,16 +110,16 @@ header a:hover {
   padding: 3rem;
   padding-top: 2.8rem;
 }
-.desination{
+.desination {
   display: inline-flex;
-  align-items:center;
+  align-items: center;
 }
-.desination h2{
+.desination h2 {
   font-size: 16px;
   color: var(--color2);
   margin-right: 5px;
 }
-.desination img{
+.desination img {
   height: 40px;
 }
 .myprofileabout p:nth-child(2) {
@@ -148,7 +148,7 @@ header a:hover {
 .myprofileaboutchild a {
   text-decoration: none;
   color: var(--color2);
-  margin-top: 1.0rem;
+  margin-top: 1rem;
   padding: 0.5rem 1.6rem;
   font-size: 1rem;
   color: var(--color1);
@@ -395,12 +395,29 @@ header a:hover {
     padding: 4rem;
     padding-top: 2.8rem;
   }
-  .myprofileabout p:nth-child(1) {
+  .desination {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .desination h2 {
+    font-size: 18px;
+    color: var(--color2);
+    margin-right: 0px;
+  }
+  .desination img {
+    height: 10px;
+    margin-left: -20px;
+  }
+  #cglogo{
+    height: 40px; 
+  }
+  .myprofileabout p:nth-child(2) {
     font-size: 0.7rem;
     color: var(--color2);
     text-align: justify;
   }
-  .myprofileabout p:nth-child(2) {
+  .myprofileabout p:nth-child(3) {
     font-size: 0.7rem;
     color: var(--color2);
     font-weight: bold;
@@ -503,5 +520,20 @@ header a:hover {
 @media (max-width: 768px) {
   header img {
     height: 15rem;
+  }
+  .desination {
+    display: inline-flex;
+    align-items: center;
+  }
+  .desination h2 {
+    font-size: 16px;
+    color: var(--color2);
+    margin-right: 5px;
+  }
+  .desination img {
+    height: 10px;
+  }
+  #cglogo{
+    height: 0px; 
   }
 }
