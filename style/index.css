@@ -399,18 +399,19 @@ header a:hover {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    justify-content: flex-start;
   }
   .desination h2 {
-    font-size: 20px;
+    font-size: 25px;
+    width: 274px;
     color: var(--color2);
     margin-right: 0px;
   }
   .desination img {
     height: 10px;
-    margin-left: -30px;
   }
   #cglogo {
-    height: 50px;
+    height: 55px;
   }
   .myprofileabout p:nth-child(2) {
     font-size: 0.7rem;
