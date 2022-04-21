@@ -401,16 +401,16 @@ header a:hover {
     margin-bottom: 10px;
   }
   .desination h2 {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--color2);
     margin-right: 0px;
   }
   .desination img {
     height: 10px;
-    margin-left: -20px;
+    margin-left: -30px;
   }
-  #cglogo{
-    height: 40px; 
+  #cglogo {
+    height: 50px;
   }
   .myprofileabout p:nth-child(2) {
     font-size: 0.7rem;
@@ -533,7 +533,7 @@ header a:hover {
   .desination img {
     height: 10px;
   }
-  #cglogo{
-    height: 0px; 
+  #cglogo {
+    height: 0px;
   }
 }
