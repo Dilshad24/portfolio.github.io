@@ -111,6 +111,7 @@ header a:hover {
   padding-top: 2.8rem;
 }
 .desination {
+  width: 100%;
   display: inline-flex;
   align-items: center;
 }
@@ -163,6 +164,7 @@ header a:hover {
   border: 1px solid var(--color2);
   padding: 0.5rem 2rem;
 }
+
 .sociallinks {
   margin-top: 4rem;
 }
@@ -403,9 +405,9 @@ header a:hover {
   }
   .desination h2 {
     font-size: 25px;
-    width: 200px;
+    /* width: 200px; */
     color: var(--color2);
-    margin-right: 0px;
+    margin-right: 5px;
   }
   .desination img {
     height: 10px;

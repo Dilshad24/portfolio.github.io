@@ -1,101 +1,123 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Dilshad</title>
-	<link rel="stylesheet" type="text/css" href="style/index.css">
-</head>
-<body>
-	<header>
-		<img src="logo/plogo2.png" alt="" id="plogo">
-		<ul>
-			<li><a href="#" id="Home">Home</a></li>
-			<li><a href="page/work.html" >Work</a></li>
-			<li><a href="https://docs.google.com/document/d/10RPCZFxLx4gw997sRmqjlQayazF5mM9EkFhNKbtHVT0/edit?usp=sharing">Resume</a></li>
-			<li><a href="page/contact.html">Contact</a></li>
-			<li><img src="logo/sun.png" alt="" id="icon"></li>
-		</ul>
+  <head>
+    <title>Dilshad</title>
+    <link rel="stylesheet" type="text/css" href="style/index.css" />
+  </head>
+  <body>
+    <header>
+      <img src="logo/plogo2.png" alt="" id="plogo" />
+      <ul>
+        <li><a href="#" id="Home">Home</a></li>
+        <li><a href="page/work.html">Work</a></li>
+        <li>
+          <a
+            href="https://docs.google.com/document/d/10RPCZFxLx4gw997sRmqjlQayazF5mM9EkFhNKbtHVT0/edit?usp=sharing"
+            >Resume</a
+          >
+        </li>
+        <li><a href="page/contact.html">Contact</a></li>
+        <li><img src="logo/sun.png" alt="" id="icon" /></li>
+      </ul>
+    </header>
+    <div class="name">
+      <p>About</p>
+      <p>Dilshad Ali</p>
+    </div>
+    <div class="myprofile">
+      <div class="myprofilemyimg">
+        <img src="myimage/myimg1.png" alt="" />
+      </div>
+      <div class="myprofileabout">
+        <div class="desination">
+          <h2>Senior Software Engineer at</h2>
+          <img id="cglogo" src="project_image/capgemini.png" alt="" />
+        </div>
+        <p>
+          Seeking to leverage my skills in Python, Web Development and Machine
+          Learninge, to gain expertise in multiple areas of software development
+          and thereby contribute to the success of the organization.
+        </p>
+        <p>Skills:</p>
+        <div class="list-container">
+          <ul>
+            <li>Python</li>
+            <li>Machine Learning</li>
+            <li>Deep Learning</li>
+            <li>Html / Css</li>
+            <li>Javascrypt / Php / Sql</li>
+            <li>Data Structures</li>
+            <li>Microsoft Excel</li>
+          </ul>
+        </div>
+        <div class="myprofileaboutchild">
+          <a href="page/work.html">Projects</a>
+          <a
+            href="https://docs.google.com/document/d/10RPCZFxLx4gw997sRmqjlQayazF5mM9EkFhNKbtHVT0/edit?usp=sharing"
+            >Resume</a
+          >
+        </div>
+        <div class="sociallinks">
+          <ul>
+            <li>
+              <a href="https://github.com/Dilshad24"
+                ><img src="logo/github.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/dilshad-ali24"
+                ><img src="logo/linkedin.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="mailto:mddilshadali2410@gmail.com"
+                ><img src="logo/gmail.svg" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <script>
+        let lightMode = localStorage.getItem("lightMode");
+        const icon = document.querySelector("#icon");
+        const enableLightMode = () => {
+          document.body.classList.add("lightmode");
+          localStorage.setItem("lightMode", "enabled");
+        };
+        const disableLightMode = () => {
+          document.body.classList.remove("lightmode");
+          localStorage.setItem("lightMode", null);
+        };
+        if (lightMode === "enabled") {
+          enableLightMode();
+          icon.src = "logo/moon.png";
+          plogo.src = "logo/logolightmode2.png";
+        }
 
-	</header>
-	<div class="name">
-		<p>About </p>
-		<p>Dilshad Ali</p>
-	</div>
-	<div class="myprofile">
-		<div class="myprofilemyimg">
-			<img src="myimage/myimg1.png" alt="">
-		</div>
-		<div class="myprofileabout">
-			<div class="desination">
-				<h2>Senior Software Engineer at </h2>
-				<img id="cglogo" src="project_image/capgemini.png" alt="">
-			</div>
-			<p>Seeking to leverage my skills in Python, Web Development and Machine Learninge, to gain expertise in multiple areas of software development and thereby contribute to the success of the organization.</p>
-			<p>Skills:</p>
-			<ul>
-				<li>Python</li>
-				<li>Machine Learning</li>
-				<li>Deep Learning</li>
-				<li>Html / Css</li>
-				<li>Javascrypt / Php / Sql</li>
-				<li>Data Structures</li>
-				<li>Microsoft Excel</li>
-			</ul>
-			<div class="myprofileaboutchild">
-				<a href="page/work.html">Projects</a>
-				<a href="https://docs.google.com/document/d/10RPCZFxLx4gw997sRmqjlQayazF5mM9EkFhNKbtHVT0/edit?usp=sharing">Resume</a>
-			</div>
-			<div class="sociallinks">
-				<ul>
-					<li><a href="https://github.com/Dilshad24"><img src="logo/github.svg" alt=""></a></li>
-					<li><a href="https://www.linkedin.com/in/dilshad-ali24"><img src="logo/linkedin.svg" alt=""></a></li>
-					<li><a href="mailto:mddilshadali2410@gmail.com"><img src="logo/gmail.svg" alt=""></a></li>
-				</ul>
-			</div>
-
-		</div>
-<script>
-	let lightMode= localStorage.getItem('lightMode');
-	const icon = document.querySelector('#icon');
-	const enableLightMode=() =>{
-		document.body.classList.add('lightmode');
-		localStorage.setItem('lightMode','enabled');
-	}
-	const disableLightMode=() =>{
-		document.body.classList.remove('lightmode');
-		localStorage.setItem('lightMode',null);
-	}
-	if(lightMode === "enabled"){
-		enableLightMode();
-		icon.src="logo/moon.png";
-		plogo.src="logo/logolightmode2.png"
-	}
-
-	icon.addEventListener("click", () =>{
-		lightMode= localStorage.getItem('lightMode');
-		if(lightMode !== "enabled"){
-			enableLightMode();
-			icon.src="logo/moon.png";
-			plogo.src="logo/logolightmode2.png"
-		}
-		else{
-			disableLightMode();
-			icon.src="logo/sun.png";
-	    	plogo.src="logo/plogo2.png";
-		}
-	});
-	// icon.onclick = function(){
-	// 	document.body.classList.toggle("light-theme");
-	// 	if (document.body.classList.contains("light-theme")) {
-	// 		icon.src="logo/moon.png"
-	// 		plogo.src="logo/logolightmode2.png"
-	// 	}
-	// 	else{
-	// 		icon.src="logo/sun.png"
-	// 		plogo.src="logo/plogo2.png"
-	// 	}
-	// }
-</script>
-	</div>
-	
-</body>
+        icon.addEventListener("click", () => {
+          lightMode = localStorage.getItem("lightMode");
+          if (lightMode !== "enabled") {
+            enableLightMode();
+            icon.src = "logo/moon.png";
+            plogo.src = "logo/logolightmode2.png";
+          } else {
+            disableLightMode();
+            icon.src = "logo/sun.png";
+            plogo.src = "logo/plogo2.png";
+          }
+        });
+        // icon.onclick = function(){
+        // 	document.body.classList.toggle("light-theme");
+        // 	if (document.body.classList.contains("light-theme")) {
+        // 		icon.src="logo/moon.png"
+        // 		plogo.src="logo/logolightmode2.png"
+        // 	}
+        // 	else{
+        // 		icon.src="logo/sun.png"
+        // 		plogo.src="logo/plogo2.png"
+        // 	}
+        // }
+      </script>
+    </div>
+  </body>
 </html>
