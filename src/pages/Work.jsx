@@ -21,7 +21,7 @@ export default function Work() {
         </div>
         <div className="projectimage1">
           <a href="https://easyshopping122.000webhostapp.com/" target="_blank" rel="noreferrer">
-            <img src="/project_image/easyshopping.com.jpg" alt="" />
+            <img src={`${import.meta.env.BASE_URL}project_image/easyshopping.com.jpg`} alt="" />
           </a>
         </div>
       </div>
@@ -29,7 +29,7 @@ export default function Work() {
       <div className="projectcard2">
         <div className="projectimage2">
           <a href="https://github.com/Dilshad24/Amazon-Product-Review-Analysis-Using-Deep-Learning" target="_blank" rel="noreferrer">
-            <img src="/project_image/amazon.jpg" alt="" />
+            <img src={`${import.meta.env.BASE_URL}project_image/amazon.jpg`} alt="" />
           </a>
         </div>
         <div className="projectdetail2">
@@ -70,7 +70,7 @@ export default function Work() {
         </div>
         <div className="projectimage1">
           <a href="https://github.com/Dilshad24/Student-Attendance-Management-System-Using-Face-Recognition" target="_blank" rel="noreferrer">
-            <img src="/project_image/Face.jpg" alt="" />
+            <img src={`${import.meta.env.BASE_URL}project_image/Face.jpg`} alt="" />
           </a>
         </div>
       </div>
@@ -78,7 +78,7 @@ export default function Work() {
       <div className="projectcard2">
         <div className="projectimage2">
           <a href="https://github.com/Dilshad24/GChat-GroupChatSystem-" target="_blank" rel="noreferrer">
-            <img src="/project_image/chatbot1.jpg" alt="" id="imgsdsh" />
+            <img src={`${import.meta.env.BASE_URL}project_image/chatbot1.jpg`} alt="" id="imgsdsh" />
           </a>
         </div>
         <div className="projectdetail2">
@@ -112,7 +112,7 @@ export default function Work() {
         </div>
         <div className="projectimage1">
           <a href="https://dilshad24.github.io/cars.com.github.io/" target="_blank" rel="noreferrer">
-            <img src="/project_image/cars.com.png" alt="" />
+            <img src={`${import.meta.env.BASE_URL}project_image/cars.com.png`} alt="" />
           </a>
         </div>
       </div>
@@ -120,7 +120,7 @@ export default function Work() {
       <div className="projectcard2">
         <div className="projectimage2">
           <a href="https://dilshad24.github.io/Lunch-Box.github.io/" target="_blank" rel="noreferrer">
-            <img src="/project_image/LunchBox.png" alt="" id="imgsdsh" />
+            <img src={`${import.meta.env.BASE_URL}project_image/LunchBox.png`} alt="" id="imgsdsh" />
           </a>
         </div>
         <div className="projectdetail2">
@@ -153,7 +153,7 @@ export default function Work() {
         </div>
         <div className="projectimage1">
           <a href="https://dilshad24.github.io/Sea-Shell-s.github.io/" target="_blank" rel="noreferrer">
-            <img src="/project_image/seashell.png" alt="" />
+            <img src={`${import.meta.env.BASE_URL}project_image/seashell.png`} alt="" />
           </a>
         </div>
       </div>
@@ -161,7 +161,7 @@ export default function Work() {
       <div className="projectcard2">
         <div className="projectimage2">
           <a href="https://dilshad24.github.io/bookfinder/" target="_blank" rel="noreferrer">
-            <img src="/project_image/bookfinder.png" alt="" id="imgsdsh" />
+            <img src={`${import.meta.env.BASE_URL}project_image/bookfinder.png`} alt="" id="imgsdsh" />
           </a>
         </div>
         <div className="projectdetail2">
@@ -193,7 +193,7 @@ export default function Work() {
         </div>
         <div className="projectimage1">
           <a href="https://dilshad24.github.io/Furniture-Hub.github.io/" target="_blank" rel="noreferrer">
-            <img src="/project_image/furniturehub.png" alt="" />
+            <img src={`${import.meta.env.BASE_URL}project_image/furniturehub.png`} alt="" />
           </a>
         </div>
       </div>
@@ -201,7 +201,7 @@ export default function Work() {
       <div className="projectcard2">
         <div className="projectimage2">
           <a href="https://dilshad24.github.io/website.github.io/" target="_blank" rel="noreferrer">
-            <img src="/project_image/cognetws.png" alt="" id="imgsdsh" />
+            <img src={`${import.meta.env.BASE_URL}project_image/cognetws.png`} alt="" id="imgsdsh" />
           </a>
         </div>
         <div className="projectdetail2">

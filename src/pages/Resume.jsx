@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
+import resumePdf from '../assets/resume.pdf';
 
 // Set worker source to CDN to avoid build/path issues with Vite + GitHub Pages
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
@@ -24,20 +25,20 @@ export default function Resume() {
     <div className="resume-container">
       <div className="resume-header-row">
         <h2 className="resume-header">My Resume</h2>
-        <a href="/resume.pdf" download className="download-btn">
+        <a href={resumePdf} download className="download-btn">
           <span>Download PDF</span>
         </a>
       </div>
       
       <div className="pdf-container">
         <Document 
-          file="/resume.pdf" 
+          file={resumePdf} 
           onLoadSuccess={onDocumentLoadSuccess}
           onLoadError={(error) => console.error('Error loading PDF:', error)}
           loading={<div style={{color: 'white'}}>Loading PDF...</div>}
           error={<div style={{color: 'white', padding: '20px', textAlign: 'center'}}>
             <p>Failed to load PDF.</p> 
-            <p style={{fontSize: '0.8em'}}>Please ensure <b>public/resume.pdf</b> exists and is a valid PDF file.</p>
+            <p style={{fontSize: '0.8em'}}>Please ensure <b>src/assets/resume.pdf</b> exists and is a valid PDF file.</p>
           </div>}
         >
            {numPages && Array.from(new Array(numPages), (el, index) => (

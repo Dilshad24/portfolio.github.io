@@ -7,7 +7,7 @@ export default function Header({ lightMode, toggleTheme }) {
   return (
     <header>
       <img 
-        src={lightMode ? "/logo/logolightmode2.png" : "/logo/plogo2.png"} 
+        src={lightMode ? `${import.meta.env.BASE_URL}logo/logolightmode2.png` : `${import.meta.env.BASE_URL}logo/plogo2.png`} 
         alt="Logo" 
         id="plogo" 
       />
@@ -26,7 +26,7 @@ export default function Header({ lightMode, toggleTheme }) {
         </li>
         <li>
             <img 
-                src={lightMode ? "/logo/moon.png" : "/logo/sun.png"} 
+                src={lightMode ? `${import.meta.env.BASE_URL}logo/moon.png` : `${import.meta.env.BASE_URL}logo/sun.png`} 
                 alt="Theme Toggle" 
                 id="icon" 
                 onClick={toggleTheme}

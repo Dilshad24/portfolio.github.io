@@ -9,12 +9,12 @@ export default function Home() {
       </div>
       <div className="myprofile">
         <div className="myprofilemyimg">
-          <img src="/myimage/myimg1.png" alt="" />
+          <img src={`${import.meta.env.BASE_URL}myimage/myimg1.png`} alt="" />
         </div>
         <div className="myprofileabout">
           <div className="desination">
             <h2>Associate Consultant at</h2>
-            <img id="cglogo" src="/project_image/capgemini.png" alt="" />
+            <img id="cglogo" src={`${import.meta.env.BASE_URL}project_image/capgemini.png`} alt="" />
           </div>
           <p>
             Dedicated <b>Guidewire Developer</b> with
@@ -64,17 +64,17 @@ export default function Home() {
             <ul>
               <li>
                 <a href="https://github.com/Dilshad24" target="_blank" rel="noreferrer">
-                  <img src="/logo/github.svg" alt="" />
+                  <img src={`${import.meta.env.BASE_URL}logo/github.svg`} alt="" />
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/dilshad-ali24" target="_blank" rel="noreferrer">
-                  <img src="/logo/linkedin.svg" alt="" />
+                  <img src={`${import.meta.env.BASE_URL}logo/linkedin.svg`} alt="" />
                 </a>
               </li>
               <li>
                 <a href="mailto:mddilshadali2410@gmail.com">
-                  <img src="/logo/gmail.svg" alt="" />
+                  <img src={`${import.meta.env.BASE_URL}logo/gmail.svg`} alt="" />
                 </a>
               </li>
             </ul>

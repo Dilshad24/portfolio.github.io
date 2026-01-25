@@ -5,17 +5,17 @@ export default function Contact() {
         <ul>
           <li>
             <a href="https://github.com/Dilshad24" target="_blank" rel="noreferrer">
-              <img src="/logo/github.svg" alt="" />
+              <img src={`${import.meta.env.BASE_URL}logo/github.svg`} alt="" />
             </a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/dilshad-ali24" target="_blank" rel="noreferrer">
-              <img src="/logo/linkedin.svg" alt="" />
+              <img src={`${import.meta.env.BASE_URL}logo/linkedin.svg`} alt="" />
             </a>
           </li>
           <li>
             <a href="mailto:mddilshadali2410@gmail.com">
-              <img src="/logo/gmail.svg" alt="" />
+              <img src={`${import.meta.env.BASE_URL}logo/gmail.svg`} alt="" />
             </a>
           </li>
         </ul>
