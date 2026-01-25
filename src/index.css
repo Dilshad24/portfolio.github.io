@@ -348,48 +348,7 @@ header a:hover {
   color: var(--color2);
   padding: 0.3rem 2rem;
 }
-/*------------ contact page start ----------- */
-.contactsociallinks {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-  height: 3rem;
-}
-.contactsociallinks ul {
-  display: flex;
-}
-.contactsociallinks li {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  height: 3rem;
-  width: 2.2rem;
-}
-
-.contactsociallinks img {
-  height: 2rem;
-  transition: 0.5s;
-}
-.contactsociallinks img:hover {
-  height: 2.3rem;
-  opacity: 0.5;
-}
-.contctnumber {
-  display: flex;
-  justify-content: center;
-  font-size: 1.1rem;
-  color: var(--color2);
-  margin-top: 2rem;
-}
-.contactthanks {
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
-  color: var(--color1);
-  margin-top: 5rem;
-}
-
-/*------------ contat page ends ----------- */
-/*-------------------------------------------------------------------------------------------*/
+/*------------ contact page styles removed (replaced by redesign at bottom) ----------- */
 /*-------------------------------------------------------------------------------------------*/
 
 @media (max-width: 998px) {
@@ -495,49 +454,8 @@ header a:hover {
     margin-left: 5rem;
   }
   /*------------ work page end ----------- */
-  /*------------ contact page start ----------- */
-  .contactsociallinks {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    height: 3rem;
-  }
-  .contactsociallinks ul {
-    display: flex;
-  }
-  .contactsociallinks li {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    height: 3rem;
-    width: 2.2rem;
-  }
-
-  .contactsociallinks img {
-    height: 3rem;
-  }
-  .contactsociallinks img:hover {
-    height: 2.3rem;
-    transition: 1s;
-  }
-  .contctnumber {
-    display: flex;
-    justify-content: center;
-    font-size: 2rem;
-    color: var(--color2);
-    margin-top: 4rem;
-  }
-  .contactthanks {
-    display: flex;
-    justify-content: center;
-    font-size: 3rem;
-    color: var(--color1);
-    margin-top: 10rem;
-  }
-
-  /*------------ contat page ends ----------- */
+  /*------------ contact page styles removed (replaced by redesign at bottom) ----------- */
 }
-/*-------------------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------------------------*/
 
 body {
   font-size: 62.5%;
@@ -688,7 +606,164 @@ header {
   color: #666;
 }
 
+/* Page Info - Keep if needed, otherwise optional */
 .page-info {
   font-size: 1.1rem;
   font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              CONTACT PAGE REDESIGN                          */
+/* -------------------------------------------------------------------------- */
+
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aligns to top, prevents centering issues on small screens */
+  min-height: 80vh;
+  padding: 2rem;
+  width: 100%;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.05); /* very subtle light bg */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.lightmode .contact-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  color: var(--color1); /* Red accent */
+  margin-bottom: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: var(--color2);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color2);
+  opacity: 0.6;
+}
+
+.contact-value {
+  font-size: 1.3rem;
+  color: var(--color2);
+  font-weight: bold;
+}
+
+.contact-value.link {
+  color: var(--color2);
+  transition: color 0.3s ease;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.contact-value.link:hover {
+  color: var(--color1);
+  border-bottom: 1px solid var(--color1);
+}
+
+.contact-socials {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05); /* subtle circle bg */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.lightmode .social-icon {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.social-icon img {
+  width: 1.8rem;
+  height: 1.8rem;
+  transition: transform 0.3s ease;
+  /* If icons are SVGs or transparent PNGs properly handled, this works. 
+     If icons need filtering for color (e.g. white to red), that's harder without SVG manipulation or filters.
+     Assuming provided icons modify well or look good as is. */
+}
+
+.social-icon:hover {
+  background: var(--color1); /* Red bg on hover */
+  border-color: var(--color1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+}
+
+.social-icon:hover img {
+   /* filter: brightness(0) invert(1);  Optional: make icon white on hover if not already */
+   transform: scale(1.1);
+}
+
+.contact-footer p {
+  font-size: 1rem;
+  color: var(--color2);
+  opacity: 0.7;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .contact-title {
+    font-size: 2rem;
+  }
+  
+  .contact-value {
+    font-size: 1.1rem;
+  }
 }
