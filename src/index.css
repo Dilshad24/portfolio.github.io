@@ -19,11 +19,29 @@ body {
   font-size: 62.5%;
   background-color: var(--bgcolor);
   font-family: "Balsamiq Sans", cursive;
+  padding-top: 5rem; /* Reduced to pull content up */
 }
 
 header {
   display: flex;
   color: var(--color2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent; /* Changed from var(--bgcolor) to transparent */
+  padding-bottom: 0.5rem; /* Slightly reduced */
+}
+
+/* Resume Page Styles */
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem auto 1rem auto; /* Minimized top margin */
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 900px;
 }
 header img {
   height: 7rem;
@@ -184,6 +202,7 @@ header a:hover {
   height: 2.4rem;
   opacity: 0.5;
 }
+
 /*------------ work page start ----------- */
 .workcontainer {
   margin-bottom: 3rem;
@@ -520,6 +539,24 @@ header a:hover {
 /*-------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------*/
 
+body {
+  font-size: 62.5%;
+  background-color: var(--bgcolor);
+  font-family: "Balsamiq Sans", cursive;
+  padding-top: 8rem; /* Restored to prevent cutting */
+}
+
+header {
+  display: flex;
+  color: var(--color2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--bgcolor); /* Reverted to solid opaque */
+  padding-bottom: 0.5rem;
+}
+
 @media (max-width: 768px) {
   header img {
     height: 15rem;
@@ -539,4 +576,119 @@ header a:hover {
   #cglogo {
     height: 0px;
   }
+}
+
+/* Resume Page Styles */
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem auto 1rem auto;
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 900px; /* Constrain width for better reading */
+}
+
+.resume-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.resume-header {
+  font-size: 2rem;
+  color: var(--color2);
+  margin: 0;
+}
+
+/* Solid button style for better visibility */
+.download-btn {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--color2); /* White text */
+  background-color: var(--color1); /* Red background */
+  border: 2px solid var(--color1);
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.download-btn:hover {
+  background-color: transparent;
+  color: var(--color1); /* Red text on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+}
+
+.pdf-container {
+  width: 100%;
+  border-radius: 4px;
+/*  overflow: hidden; Removed to allow scrolling */
+  overflow-y: auto; /* Enable vertical scrolling internally */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+  border: none; /* Removed border */
+  height: 85vh; /* Increased from 75vh to use more height */
+  display: flex;
+  justify-content: flex-start; /* Align pages to top */
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent; /* Removed gray background */
+  padding-top: 0; /* Removed top padding */
+  padding-bottom: 20px;
+  /* Hide Scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.pdf-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
+
+.lightmode .pdf-container {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #e0e0e0;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  color: var(--color2);
+}
+
+.page-btn {
+  background-color: transparent;
+  border: 1px solid var(--color2);
+  color: var(--color2);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+  background-color: var(--color2);
+  color: var(--bgcolor);
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #666;
+  color: #666;
+}
+
+.page-info {
+  font-size: 1.1rem;
+  font-weight: bold;
 }
