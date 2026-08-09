@@ -37,7 +37,7 @@ export default function Resume() {
             Loading document...
           </div>
         )}
-        <div className="iframe-scaler">
+        <div className="iframe-scaler" style={{ opacity: isLoading ? 0 : 1, transition: 'opacity 0.4s ease' }}>
           <iframe 
             src={previewUrl} 
             title="Dilshad Ali resume" 

@@ -30,11 +30,11 @@ export default function Work() {
           <article className={`project-tile tile-${index + 1}`} key={project.title}>
             {(project.live || project.link) ? (
               <a className="project-image" href={project.live || project.link} target="_blank" rel="noreferrer">
-                <img src={`${import.meta.env.BASE_URL}project_image/${project.image}`} alt="" />
+                <img src={`${import.meta.env.BASE_URL}project_image/${project.image}`} alt="" loading={index > 1 ? "lazy" : "eager"} decoding="async" />
               </a>
             ) : (
               <div className="project-image">
-                <img src={`${import.meta.env.BASE_URL}project_image/${project.image}`} alt="" />
+                <img src={`${import.meta.env.BASE_URL}project_image/${project.image}`} alt="" loading={index > 1 ? "lazy" : "eager"} decoding="async" />
               </div>
             )}
             <div className="project-body">

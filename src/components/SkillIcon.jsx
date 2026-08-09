@@ -64,7 +64,7 @@ export default function SkillIcon({ skill }) {
   const normalized = skill.toLowerCase().trim();
   
   if (DEVICONS[normalized]) {
-    return <img src={DEVICONS[normalized]} alt="" style={{ width: '15px', height: '15px', objectFit: 'contain' }} />;
+    return <img src={DEVICONS[normalized]} alt="" loading="lazy" decoding="async" style={{ width: '15px', height: '15px', objectFit: 'contain' }} />;
   }
 
   // Custom overrides matching the user's specific screenshot aesthetics

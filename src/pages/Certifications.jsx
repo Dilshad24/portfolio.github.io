@@ -33,6 +33,8 @@ export default function Certifications({ profile }) {
                   <img 
                     src={getDriveImageUrl(certificate.url)} 
                     alt={certificate.name} 
+                    loading="lazy"
+                    decoding="async"
                     onError={(e) => { e.target.style.display = 'none'; }} 
                   />
                 </div>
