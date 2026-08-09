@@ -9,7 +9,6 @@ export const fallbackProfile = {
     'Guidewire PolicyCenter', 'Guidewire PC Rating', 'Guidewire PC Configuration',
     'Gosu', 'HTML/CSS', 'JavaScript', 'SQL', 'Java', 'Data Structures', 'Blue Prism',
   ],
-  phone: '+91 83340 05602',
   email: 'mddilshadali2410@gmail.com',
   location: 'Kolkata, India',
   experience: [

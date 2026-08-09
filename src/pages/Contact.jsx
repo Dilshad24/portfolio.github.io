@@ -12,10 +12,7 @@ export default function Contact({ profile }) {
       </section>
 
       <section className="contact-cards">
-        <a href={`tel:${profile.phone.replace(/\s/g, '')}`} className="contact-card">
-          <p>Call</p>
-          <span>{profile.phone}</span>
-        </a>
+
 
         <div className="contact-card">
           <p>Based in</p>
