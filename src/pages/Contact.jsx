@@ -1,37 +1,35 @@
-export default function Contact() {
+export default function Contact({ profile }) {
   return (
-    <div className="contact-page">
-      <div className="contact-card">
-        <h1 className="contact-title">Get in Touch</h1>
-        <p className="contact-subtitle">I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
-        
-        <div className="contact-details">
-          <div className="contact-item">
-             <span className="contact-label">Phone</span>
-             <span className="contact-value">8334005602</span>
-          </div>
-          <div className="contact-item">
-             <span className="contact-label">Email</span>
-             <a href="mailto:mddilshadali2410@gmail.com" className="contact-value link">mddilshadali2410@gmail.com</a>
-          </div>
+    <main className="contact-page page-shell page-enter">
+      <section className="contact-hero">
+        <p className="overline">Lets connect</p>
+        <h1 style={{ letterSpacing: '-0.04em' }}>Have a role or<br /><em>idea in mind?</em></h1>
+        <p>I am open to conversations about Guidewire, insurance technology, automation, and AI-focused engineering opportunities.</p>
+        <a className="contact-email-btn" href={`mailto:${profile.email}`}>
+          <span className="email-text">{profile.email}</span>
+          <span className="email-icon">↗</span>
+        </a>
+      </section>
+
+      <section className="contact-cards">
+        <a href={`tel:${profile.phone.replace(/\s/g, '')}`} className="contact-card">
+          <p>Call</p>
+          <span>{profile.phone}</span>
+        </a>
+
+        <div className="contact-card">
+          <p>Based in</p>
+          <span>{profile.location}</span>
         </div>
 
-        <div className="contact-socials">
-          <a href="https://github.com/Dilshad24" target="_blank" rel="noreferrer" className="social-icon">
-            <img src={`${import.meta.env.BASE_URL}logo/github.svg`} alt="GitHub" />
-          </a>
-          <a href="https://www.linkedin.com/in/dilshad-ali24" target="_blank" rel="noreferrer" className="social-icon">
-            <img src={`${import.meta.env.BASE_URL}logo/linkedin.svg`} alt="LinkedIn" />
-          </a>
-          <a href="mailto:mddilshadali2410@gmail.com" className="social-icon">
-            <img src={`${import.meta.env.BASE_URL}logo/gmail.svg`} alt="Email" />
-          </a>
+        <div className="contact-card">
+          <p>Find me online</p>
+          <div className="social-links-grid">
+            <a href="https://github.com/Dilshad24" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/dilshad-ali24" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
         </div>
-
-        <div className="contact-footer">
-          <p>Thank you for visiting!</p>
-        </div>
-      </div>
-    </div>
+      </section>
+    </main>
   )
 }

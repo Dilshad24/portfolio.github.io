@@ -1,86 +1,58 @@
 import { Link } from 'react-router-dom'
+import './home.css'
+import mainImage from '../assets/my images/main image.webp'
+import SkillIcon from '../components/SkillIcon'
 
-export default function Home() {
-  return (
-    <div>
-      <div className="name">
-        <p>About</p>
-        <p>Dilshad Ali</p>
-      </div>
-      <div className="myprofile">
-        <div className="myprofilemyimg">
-          <img src={`${import.meta.env.BASE_URL}myimage/myimg1.png`} alt="" />
-        </div>
-        <div className="myprofileabout">
-          <div className="desination">
-            <h2>Associate Consultant at</h2>
-            <img id="cglogo" src={`${import.meta.env.BASE_URL}project_image/capgemini.png`} alt="" />
-          </div>
-          <p>
-            Dedicated <b>Guidewire Developer</b> with
-            <b>3.3 years of experience</b>, specializing in
-            <b>Guidewire PolicyCenter</b>, including <b>PolicyCenter Rating</b>,
-            and <b>Guidewire 9.04</b> for
-            <b>Configuration, Implementation, and Development</b>. Proficient in
-            the <b>Financial Services</b> and <b>Insurance domain</b>, delivering
-            robust and scalable solutions to enhance functionality and streamline
-            operations.
-          </p>
-          {/*
-          <p>
-            Seeking to leverage my skills in Python, Web Development and Machine
-            Learninge, to gain expertise in multiple areas of software development
-            and thereby contribute to the success of the organization.
-          </p>
-          */}
-          <p>Skills:</p>
-          <ul>
-            <li>Guidewire Policy Center</li>
-            <li>Guidewire PC Rating</li>
-            <li>Guidewire PC Configuration</li>
-            <li>Html / Css</li>
-            <li>Python</li>
-            <li>Guidewire Policy Center</li>
-            <li>Gosu</li>
-            <li>Machine Learning</li>
-            <li>Deep Learning</li>
-            <li>Html / Css</li>
-            <li>Javascrypt / Php / Sql</li>
-            <li>Data Structures</li>
-            <li>Microsoft Excel</li>
-            <li>Pandas</li>
-            <li>Microsoft Excel</li>
-            <li>Blueprism</li>
-          </ul>
-          <div className="myprofileaboutchild">
-            <Link to="/work">Projects</Link>
-            <a
-              href="https://docs.google.com/document/d/1OFkB3d3SXz-nod_0xjSlYeIgnwhYAyPC/edit?usp=sharing&ouid=112976319464163235155&rtpof=true&sd=true"
-              target="_blank"
-              rel="noreferrer"
-            >Resume</a>
-          </div>
-          <div className="sociallinks">
-            <ul>
-              <li>
-                <a href="https://github.com/Dilshad24" target="_blank" rel="noreferrer">
-                  <img src={`${import.meta.env.BASE_URL}logo/github.svg`} alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/dilshad-ali24" target="_blank" rel="noreferrer">
-                  <img src={`${import.meta.env.BASE_URL}logo/linkedin.svg`} alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="mailto:mddilshadali2410@gmail.com">
-                  <img src={`${import.meta.env.BASE_URL}logo/gmail.svg`} alt="" />
-                </a>
-              </li>
-            </ul>
-          </div>
+export default function Home({ profile }) {
+  // Extract just the first sentence of the summary so it doesn't break the design
+  let shortSummary = profile.summary;
+  if (shortSummary && shortSummary.includes('.')) {
+    shortSummary = shortSummary.split('.')[0] + '.';
+  }
+  
+  // Prevent repeating "I am [Name]" if the API data already starts with it
+  const displaySummary = shortSummary.toLowerCase().startsWith('i am')
+    ? shortSummary
+    : `I am ${profile.name}, a ${shortSummary}`;
+
+  return <main className="page-enter">
+    <section className="hero-section page-shell"><p className="overline mobile-only"><i /> {profile.role} - {profile.company}</p><div className="hero-content"><p className="overline desktop-only"><i /> {profile.role} - {profile.company}</p><h1 className="desktop-only">Building<br />dependable<br /><em>insurance<br />technology.</em></h1><p className="hero-lede">{displaySummary}</p><div className="cta-row"><Link className="button button-primary" to="/work">Explore selected work <span>-&gt;</span></Link><Link className="button button-ghost" to="/resume">View resume</Link></div><div className="hero-skills"><p>Core stack</p><div>{profile.skills.map((skill) => <span key={skill} className="skill-pill"><SkillIcon skill={skill} />{skill}</span>)}</div></div><div className="social-row"><a href="https://github.com/Dilshad24" target="_blank" rel="noreferrer"><img src={`${import.meta.env.BASE_URL}logo/github.svg`} alt="" /><span>GitHub</span></a><a href="https://www.linkedin.com/in/dilshad-ali24" target="_blank" rel="noreferrer"><img src={`${import.meta.env.BASE_URL}logo/linkedin.svg`} alt="" /><span>LinkedIn</span></a><a href={`mailto:${profile.email}`}><img src={`${import.meta.env.BASE_URL}logo/gmail.svg`} alt="" /><span>Email</span></a></div></div><div className="hero-visual"><img src={mainImage} alt={profile.name} /><div className="experience-card"><strong>{profile.yearsExperience}</strong><span>Years of<br />experience</span></div></div></section>
+    <section className="experience-showcase page-shell"><div className="showcase-heading"><div><p className="overline">Career history</p><h2>Professional <em>experience.</em></h2></div><p>Guidewire PolicyCenter delivery, rating configuration, production support, and workflow automation.</p></div><div className="experience-cards">{profile.experience.map((job, index) => <article className="experience-panel" key={`${job.company}-${job.role}`}><span className="panel-number">0{index + 1}</span><p className="panel-period">{job.period}</p><h3>{job.role}</h3><p className="panel-company">{job.company} <i /> {job.location}</p><div className="panel-line" /><ul>{(job.points || []).slice(0, 3).map((point) => <li key={point}>{point}</li>)}</ul></article>)}</div></section>
+    <section className="achievements-section page-shell">
+      <div className="showcase-heading">
+        <div>
+          <p className="overline">Milestones</p>
+          <h2>Key <em>Achievements.</em></h2>
         </div>
       </div>
-    </div>
-  )
+      <div className="achievements-grid">
+        {profile.achievements.map((achievement) => (
+          <div className="achievement-card" key={achievement}>
+            <div className="achievement-icon">✦</div>
+            <p>{achievement}</p>
+          </div>
+        ))}
+      </div>
+    </section>    <section className="certifications-cta-section page-shell">
+      <div className="cert-cta-box">
+        <div className="cert-cta-header">
+          <div>
+            <p className="overline">Credentials</p>
+            <h2>Professional <em>Certifications.</em></h2>
+            <p className="cert-cta-lede">View my verified credentials demonstrating my expertise in Guidewire and Cloud technologies.</p>
+          </div>
+          <Link className="button button-primary" to="/certifications">View All Certificates <span>-&gt;</span></Link>
+        </div>
+        <div className="cert-cta-grid">
+          {profile.certifications.map(cert => (
+            <div className="cert-cta-item" key={cert.name}>
+              <strong>{cert.name}</strong>
+              {cert.detail && <span>{cert.detail}</span>}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section className="qualification-section page-shell"><article className="education-card"><p className="overline">Education</p><h3>{profile.education.degree}</h3><p>{profile.education.school}</p><div><span>{profile.education.date}</span><b>{profile.education.score}</b></div></article></section>
+  </main>
 }

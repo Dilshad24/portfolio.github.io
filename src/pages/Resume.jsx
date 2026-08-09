@@ -1,59 +1,50 @@
-import { useState, useEffect } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
-import 'react-pdf/dist/Page/AnnotationLayer.css';
-import 'react-pdf/dist/Page/TextLayer.css';
-import resumePdf from '../assets/resume.pdf';
+import { useState } from 'react';
 
-// Set worker source to CDN to avoid build/path issues with Vite + GitHub Pages
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+const documentId = '1MATzyPKk4mo2Y2bF9r6yuZmw_Zte1qX2W0G01o5CpoY'
+const downloadUrl = `https://docs.google.com/document/d/${documentId}/export?format=pdf`
+const previewUrl = `https://docs.google.com/document/d/${documentId}/preview`
 
 export default function Resume() {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-  const [width, setWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
+  const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="resume-container">
-      <div className="resume-header-row">
-        <h2 className="resume-header">My Resume</h2>
-        <a href={resumePdf} download className="download-btn">
-          <span>Download PDF</span>
-        </a>
+    <main className="resume-container page-enter">
+      <section className="page-intro" style={{ maxWidth: '100%', marginBottom: '24px' }}>
+        <div className="resume-header-row" style={{ alignItems: 'center' }}>
+          <div>
+            <h1 style={{ margin: '0 0 8px', fontSize: 'clamp(2rem, 4vw, 3.5rem)', letterSpacing: '-0.04em' }}>Curriculum <em>Vitae.</em></h1>
+            <p style={{ maxWidth: '640px', color: 'var(--muted)', fontSize: '0.9rem', lineHeight: '1.6' }}>
+              My complete professional history, including roles at EY and Capgemini, 
+              certifications, and project highlights. This live document is always up to date.
+            </p>
+          </div>
+          <a href={downloadUrl} className="button button-primary download-btn" style={{ flexShrink: 0 }}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download PDF
+          </a>
+        </div>
+      </section>
+
+      <div className="live-resume-frame" style={{ position: 'relative' }}>
+        <div className="frame-header" style={{ position: 'relative', zIndex: 2 }}>
+          <span className="dot dot-close"></span>
+          <span className="dot dot-min"></span>
+          <span className="dot dot-max"></span>
+          <div className="frame-title">Dilshad_Ali_Resume.pdf</div>
+        </div>
+        {isLoading && (
+          <div style={{ position: 'absolute', top: '50%', left: '0', right: '0', textAlign: 'center', color: 'var(--muted)', zIndex: 0, font: '500 0.85rem "DM Mono", monospace' }}>
+            Loading document...
+          </div>
+        )}
+        <div className="iframe-scaler">
+          <iframe 
+            src={previewUrl} 
+            title="Dilshad Ali resume" 
+            onLoad={() => setIsLoading(false)}
+          />
+        </div>
       </div>
-      
-      <div className="pdf-container">
-        <Document 
-          file={resumePdf} 
-          onLoadSuccess={onDocumentLoadSuccess}
-          onLoadError={(error) => console.error('Error loading PDF:', error)}
-          loading={<div style={{color: 'white'}}>Loading PDF...</div>}
-          error={<div style={{color: 'white', padding: '20px', textAlign: 'center'}}>
-            <p>Failed to load PDF.</p> 
-            <p style={{fontSize: '0.8em'}}>Please ensure <b>src/assets/resume.pdf</b> exists and is a valid PDF file.</p>
-          </div>}
-        >
-           {numPages && Array.from(new Array(numPages), (el, index) => (
-              <Page 
-                key={`page_${index + 1}`} 
-                pageNumber={index + 1} 
-                width={width > 900 ? 900 : width - 40} 
-                renderTextLayer={false}
-                renderAnnotationLayer={true}
-                className="pdf-page"
-                style={{marginBottom: index < numPages -1 ? '10px' : '0'}}
-              />
-            ))}
-        </Document>
-      </div>
-    </div>
-  );
+    </main>
+  )
 }
