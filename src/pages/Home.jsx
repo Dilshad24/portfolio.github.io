@@ -26,12 +26,18 @@ export default function Home({ profile }) {
         </div>
       </div>
       <div className="achievements-grid">
-        {profile.achievements.map((achievement) => (
-          <div className="achievement-card" key={achievement}>
-            <div className="achievement-icon">✦</div>
-            <p>{achievement}</p>
-          </div>
-        ))}
+        {profile.achievements.map((achievement, idx) => {
+          const parts = achievement.split(' – ');
+          return (
+            <div className={`achievement-card ${parts.length > 1 ? 'achievement-card-wide' : ''}`} key={idx}>
+              <div className="achievement-icon">✦</div>
+              <div className="achievement-text-content">
+                <p><strong>{parts[0]}</strong></p>
+                {parts[1] && <p className="achievement-desc">{parts[1]}</p>}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>    <section className="certifications-cta-section page-shell">
       <div className="cert-cta-box">

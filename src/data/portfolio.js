@@ -21,7 +21,12 @@ export const fallbackProfile = {
       points: ['Managed PolicyCenter incidents and configuration work to minimize business disruption.', 'Delivered rate books, rate routines, and rate tables for four new state rollouts.', 'Automated Data Hub workflows using Blue Prism RPA to reduce manual effort and errors.'],
     },
   ],
-  achievements: ['Guidewire Associate Certification', 'Achiever Extraordinaire Award - EY (2025 and 2026)', 'Capgemini Certified PolicyCenter Developer Level 1', 'Ranked 3rd in Industry Domain Training (Capgemini)'],
+  achievements: [
+    'Achiever Extraordinaire Award - EY (2025 and 2026) – Recognized for exceptional dedication, delivery excellence, and consistent high performance across project responsibilities.',
+    'Capgemini Certified PolicyCenter Developer Level 1.',
+    'Awarded Industry Level P&C Insurance Developer.',
+    'Ranked 3rd in Industry Domain Training (Capgemini)'
+  ],
   certifications: [
     { name: 'Guidewire Certified Associate', date: 'Apr 2026', detail: 'Achieved certification demonstrating core proficiency in Guidewire PolicyCenter configuration, integration, and development.', url: 'https://drive.google.com/file/d/1zGK95NsI7M6z6xvSB67Mu3XT5hb_JV3w/view?usp=drive_link' },
     { name: 'AWS Certified Cloud Practitioner', date: 'Dec 2022', detail: 'Obtained the AWS Certified Cloud Practitioner certification, demonstrating a solid understanding of cloud computing concepts, AWS services, and foundational architectural principles.', url: 'https://drive.google.com/file/d/1lqZrBBKo06fAsdepUtyTVp1XYG5CqIR-/view?usp=sharing' },
@@ -47,7 +52,7 @@ export async function loadProfile() {
     location: remote.location?.trim() || fallbackProfile.location,
     skills: remote.skills?.length ? remote.skills : fallbackProfile.skills,
     experience,
-    achievements: remote.achievements?.length ? remote.achievements : fallbackProfile.achievements,
+    achievements: fallbackProfile.achievements,
     certifications: remote.certifications?.length ? remote.certifications : fallbackProfile.certifications,
     education: remote.education?.degree && remote.education?.school ? remote.education : fallbackProfile.education,
   }
