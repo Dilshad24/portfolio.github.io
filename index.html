@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dilshad Ali - Portfolio</title>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+
+    <style>
+      #root { opacity: 0; transition: opacity 0.6s ease-out; }
+      #root.fonts-loaded { opacity: 1; }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const root = document.getElementById('root');
+        if (!root) return;
+        // Wait for all fonts to finish downloading, or force show after 1.5 seconds to prevent hanging
+        Promise.race([
+          document.fonts.ready,
+          new Promise(res => setTimeout(res, 1500))
+        ]).then(() => {
+          root.classList.add('fonts-loaded');
+        });
+      });
+    </script>
+
     <!-- Google tag (gtag.js) - Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRF6VTKZP7"></script>
     <script>

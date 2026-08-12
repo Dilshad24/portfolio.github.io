@@ -1,0 +1,83 @@
+{
+  "summary": "Guidewire Certified Associate and PolicyCenter Developer with nearly 5 years of experience, specializing in Guidewire PolicyCenter, including PolicyCenter Rating, and Guidewire 9.04 for Configuration, Implementation, and Development. Proficient in the Financial Services and Insurance domain, delivering robust and scalable solutions to enhance functionality and streamline operations. Extensive experience in PolicyCenter configuration, including developing and maintaining PCF screens, validations, rule sets, and business logic to enhance system capabilities and user experience. Expertise in Guidewire PolicyCenter Rating, with a track record of configuring rate books, rate routines, and rate tables to support accurate and efficient policy rating across multiple states. Proficient in Blue Prism RPA, automating workflows for the Data Hub team, eliminating manual tasks, and optimizing operational efficiency. Skilled in work distribution, team collaboration, and mentoring team members to define and implement effective technical solutions. Recognized for exceptional communication, adaptability, and a passion for learning and integrating new technologies into existing systems. Experienced in managing multiple projects simultaneously in fast-paced environments, consistently delivering high-quality results on time and within scope.",
+  "skills": [
+    "PYTHON",
+    "MACHINE LEARNING",
+    "DEEP LEARNING",
+    "OPENCV",
+    "React",
+    "Guidewire Policy Center",
+    "Guidewire PC Rating",
+    "HTML/CSS",
+    "JAVASCRIPT",
+    "Data Structures",
+    "Guidewire PC Configuration",
+    "Gosu",
+    "SQL",
+    "JAVA",
+    "Blueprism"
+  ],
+  "email": "",
+  "phone": "",
+  "location": "",
+  "experience": [
+    {
+      "role": "Senior Software Engineer",
+      "company": "Ernst & Young",
+      "location": "Kolkata",
+      "period": "28/04/2025 - Present",
+      "points": [
+        "Responsibilities and Achievements: Continuing ownership of Guidewire PolicyCenter configuration/rating and production support with increased responsibility for issue triage and resolution Leading enhancements to PCF screens, validations, and rule sets to improve usability and system performance Supporting rating configurations and state rollout activities as part of the ongoing implementation roadmap Performing data fixes and analysis to ensure system accuracy across policy transactions Collaborating with cross",
+        "functional and onshore teams to plan deliverables and ensure alignment with compliance requirements"
+      ]
+    },
+    {
+      "role": "Associate Consultant",
+      "company": "Capgemini",
+      "location": "Kolkata",
+      "period": "7/10/2021 - 25/04/2025",
+      "points": [
+        "Responsibilities and Achievements: Successfully managed incidents on Guidewire Policy Center, ensuring prompt resolution and minimizing disruptions to business operations. Developed and maintained PCF screens, configured validations, and implemented rule sets to enhance the functionality and usability of the Policy Center application. Played a pivotal role in extending the Policy Center project to cover four new states by creating rate books, rate routines, and rate tables while ensuring compliance with state",
+        "specific regulations. Designed and implemented core business logic in both Policy Center configuration and rating to support seamless system operations and accurate premium calculations. Performed critical data fixes, demonstrating strong attention to detail and analytical problem",
+        "solving skills to maintain data accuracy and integrity within the system. Spearheaded a subsidiary initiative to automate Data Hub processes, leveraging Blue Prism RPA technology, resulting in a notable increase in task efficiency and a significant reduction in manual errors. Actively participated in team meetings, sharing insights, best practices, and contributing to the overall knowledge"
+      ]
+    }
+  ],
+  "role": "Senior Software Engineer",
+  "company": "Ernst & Young",
+  "yearsExperience": "05",
+  "achievements": [
+    "Achiever Extraordinaire Award – EY (2025) and (2026)",
+    "Recognized for exceptional dedication",
+    "delivery excellence",
+    "and consistent high performance across project responsibilities.",
+    "Capgemini Certified Policy Center Developer Level 1.",
+    "Awarded Industry Level P&C Insurance Developer.",
+    "Ranked 3rd in Industry Domain Training (Capgemini)."
+  ],
+  "certifications": [
+    {
+      "name": "Guidewire Certified Associate",
+      "date": "04/2026",
+      "detail": "Validated knowledge of Guidewire platform fundamentals, development best practices, and cloud implementation concepts, demonstrating the ability to effectively support and implement Guidewire InsuranceSuite solutions.",
+      "url": "/certs/cert-0.jpg",
+      "originalDriveUrl": "https://lh3.googleusercontent.com/d/1zGK95NsI7M6z6xvSB67Mu3XT5hb_JV3w=w1200",
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAuADwDASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAABAACAwUGAQf/xAAyEAABAwICBggGAwAAAAAAAAABAAIDESEEEhMUMUFRkgUGFiIzVGHRFVNxgaGxIzKR/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAEDAgT/xAAeEQACAgIDAQEAAAAAAAAAAAAAAQIDERITMUEhYf/aAAwDAQACEQMRAD8A2Tq5TlFTSyjjdKWAyMAdvAKxAxM9bzy85R2hmzGuJxNAaUAcSFs6sennV+fDWAurcU+6csgIpjU61iabu69DzvxELgNYmIIqCS5qiq/Q78eG3QE3TPR+HmdFLimNkYaObc0KyWsz/Pl5yhZnYPTyHNLnJ75c4bfRSVepY3bdI3GH6XwGKmbDBimPkdsbcEo5edQOwgna5jpdKK5C1woLInWZ/ny85VjXsJXavDRb9nH+abyFP+AT+dP+H3V4dhQojaDZ0nHxLftTkkXigVvwCfzuz0Pumu6vSu/tiwacWn3Vw1+RobegtdwJ/acJCTsp9x7pySHFApOzb/Mt5ChMb1ZkaBMx+mIPfYwUc5vpXetSL7HA/Rdvx/CObfZVXFfUZbBdWJchlkkET31o1zalrdwNN6K7Nv8AMt5Cr+/H8LqKcl0HXF/WcIqCOIQupio70dd38TUWodC7Pm0hr9Ny4NCPU+L2m1PCalqdx3mWt4TUUkgIG4dzHOMcgY0mtBGFJG1zQc785rtpRPSQCSSSQH//2Q=="
+    },
+    {
+      "name": "AWS Cloud Practitioner",
+      "date": "12/2022",
+      "detail": "Obtained the AWS Certified Cloud Practitioner certification, demonstrating a solid understanding of cloud computing concepts, AWS services, and foundational architectural principles.",
+      "url": "/certs/cert-1.jpg",
+      "originalDriveUrl": "https://lh3.googleusercontent.com/d/1lqZrBBKo06fAsdepUtyTVp1XYG5CqIR-=w1200",
+      "placeholder": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAuADwDASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAABgABAgQFAwf/xAA3EAABAgMDCQUGBwAAAAAAAAABAAIDBBEFBtETITFRVHGSobISFRYiNRQyQVJhYlOBgpHB4fD/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAASH/2gAMAwEAAhEDEQA/AFbVp2hCtmYgS0y9jGkdloIAHlB+KputW126Zx4/U1Pb5hi8EyYzS5lRUA0PuhU+1I1rk44GoOC2ysvti1WCpnX0+hGCh35ae2xeWCpxHQDDYITXtePeLjmK5oNDvy09ti8sEu/LT22LywWekg0O/LT22LywRld+PFmbIgxY7zEiO7VXHSc5XnqPrsehS+93UVKQK3icWW9NObpq34faFn5eJrHCFoXjFbdmt7ekKh7PF/DicBVDZeJrHCEsu+lKjhCf2eLQnJxKDSewUwgvOhjuEoOaSmYT2ipa4DWWlRoNfJAyPrsehS+93UUBUGtHt2PQpfe7qKlIFrwtLremgNNW9IVQxH5gYcL/AH5ontK7cectKLNwppkPt0oC0kjMB/CrG6k4QQZ9hB+w4oB1zy0eYDP9f7UcoPlHPFEZulNEEGeh59PkOKj4Oj7XC4DimLoeyjflHPFRcWnQANwRH4Oj7XC4Dil4Oj7XC4DimGhsUHxP7I9ux6FL73dRWN4Oj7XC4DiiOyZJ1n2fDlnvDyyvmAoDUkpSP//Z"
+    }
+  ],
+  "education": {
+    "degree": "Graduated July 2021 (BTech: CSE)Calcutta Institute Of Engineering And Management CGPA 8.24/10",
+    "school": "",
+    "date": "",
+    "score": ""
+  },
+  "updatedAt": "2026-08-12T17:48:42.748Z"
+}

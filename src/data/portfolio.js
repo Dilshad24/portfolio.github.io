@@ -34,13 +34,12 @@ export const fallbackProfile = {
   education: { degree: 'BTech - Computer Science and Engineering', school: 'Calcutta Institute of Engineering and Management', date: 'Graduated July 2021', score: 'CGPA 8.24 / 10' },
 }
 
-export async function loadProfile() {
-  const endpoint = window.__PORTFOLIO_CONFIG__?.resumeApiUrl
-  if (!endpoint) return fallbackProfile
-  const response = await fetch(endpoint, { cache: 'no-store' })
-  if (!response.ok) throw new Error('Resume service is unavailable')
-  const remote = await response.json()
+import resumeData from './resume-data.json';
+
+export function loadProfile() {
+  const remote = resumeData || {};
   const experience = remote.experience?.length ? remote.experience : fallbackProfile.experience
+  
   return {
     ...fallbackProfile,
     ...remote,
@@ -55,5 +54,6 @@ export async function loadProfile() {
     achievements: fallbackProfile.achievements,
     certifications: remote.certifications?.length ? remote.certifications : fallbackProfile.certifications,
     education: remote.education?.degree && remote.education?.school ? remote.education : fallbackProfile.education,
+    updatedAt: remote.updatedAt || Date.now(),
   }
 }

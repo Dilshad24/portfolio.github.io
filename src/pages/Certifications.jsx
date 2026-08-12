@@ -1,10 +1,7 @@
 import { useEffect } from 'react'
 import './certifications.css'
 
-function getDriveImageUrl(url) {
-  const match = url?.match(/\/d\/([a-zA-Z0-9_-]+)/);
-  return match ? `https://lh3.googleusercontent.com/d/${match[1]}=w1200` : url;
-}
+import ProgressiveImage from '../components/ProgressiveImage'
 
 export default function Certifications({ profile }) {
   useEffect(() => {
@@ -14,15 +11,15 @@ export default function Certifications({ profile }) {
   return (
     <main className="page-enter cert-page">
       <div className="page-shell">
-        <header className="cert-header">
+        <header className="cert-header scroll-reveal">
           <p className="overline">Credentials</p>
           <h1>Professional <em>Certifications.</em></h1>
           <p className="lede">Here are my verified credentials, demonstrating my expertise in Guidewire and Cloud technologies.</p>
         </header>
 
         <div className="certificate-gallery">
-          {profile.certifications.map((certificate) => (
-            <article className="certificate-embed" key={certificate.name}>
+          {profile.certifications.map((certificate, index) => (
+            <article className={`certificate-embed scroll-reveal delay-${(index % 5) + 1}`} key={certificate.name}>
               <div className="certificate-embed-info">
                 <h3>{certificate.name}</h3>
                 {certificate.date && <span>{certificate.date}</span>}
@@ -30,12 +27,10 @@ export default function Certifications({ profile }) {
               </div>
               {certificate.url && (
                 <div className="certificate-embed-media">
-                  <img 
-                    src={getDriveImageUrl(certificate.url)} 
-                    alt={certificate.name} 
-                    loading="lazy"
-                    decoding="async"
-                    onError={(e) => { e.target.style.display = 'none'; }} 
+                  <ProgressiveImage
+                    src={`${import.meta.env.BASE_URL}${certificate.url.startsWith('/') ? certificate.url.slice(1) : certificate.url}?v=${profile.updatedAt || Date.now()}`}
+                    placeholderSrc={certificate.placeholder}
+                    alt={certificate.name}
                   />
                 </div>
               )}

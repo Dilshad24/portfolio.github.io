@@ -1,0 +1,43 @@
+name: Update Resume Data
+
+on:
+  schedule:
+    # Run automatically every day at midnight (UTC) just as a fallback backup
+    - cron: '0 0 * * *' 
+  repository_dispatch:
+    # This allows the Google Apps Script webhook to trigger this action
+    types: [update-resume]
+  workflow_dispatch:
+    # Allows you to trigger this manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch Latest Resume Data
+        run: |
+          curl -sL "https://script.google.com/macros/s/AKfycbxIm44k7-2b-m53Hc_lK6C6d-gy0SCKu7gx22sYfWZeM_iL4s0P3ifZocLimREC1vilUg/exec" > src/data/resume-data.json
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Download Assets
+        run: node scripts/download-assets.js
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add src/data/resume-data.json public/Dilshad_Ali_Resume.pdf public/certs/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update resume and assets" && git push)
